@@ -39,15 +39,33 @@ header{
     gap: 48px;
 }
 
-.nav-item a{
+.nav-item a {
+    position: relative;
+    display: inline-block;
     text-decoration: none;
-    color: #1d1d1dad;
+    color: #000000ad;
     font-weight: 600;
+    padding-bottom: 4px; 
 }
 
-.nav-item.active a{
-    color: #1d1d1dad;
-    border-bottom: 3px solid #336137;
+.nav-item a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 0;
+    height: 2px;
+    background-color: #336137;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-item a:hover {
+    color: #336137;
+}
+
+.nav-item a:hover::after {
+    width: 100%; 
 }
 
 .btn-default{
@@ -118,7 +136,7 @@ section{
 #home{
     display: flex;
     min-height: calc(100vh - 91px);
-    position: relative; /*usado para a forma geométrica também em shape*/
+    position: relative; 
 }
 
 #cta{
@@ -427,7 +445,7 @@ section{
 }
 
 footer{
-    background-color: #ffe8b4;   
+    background-color: #336137;
 }
 
 #footer_items{
@@ -438,7 +456,7 @@ footer{
 }
 
 #copyright{
-    color: #1d1d1d;
+    color: #fff;
     font-size: 500;
 }
 
