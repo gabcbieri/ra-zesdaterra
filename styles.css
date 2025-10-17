@@ -29,7 +29,8 @@ header{
 
 #nav_logo{
     font-size: 24px;
-    color: #e9a209;
+    color: #336137;
+    font-weight: 700;
 }
 
 #nav_list{
@@ -46,15 +47,17 @@ header{
 
 .nav-item.active a{
     color: #1d1d1dad;
-    border-bottom: 3px solid #ffe100;
+    border-bottom: 3px solid #336137;
 }
 
 .btn-default{
     border: none;
     display: flex;
+    text-decoration: none;
+    color: #ffffff !important;
     align-items: center;
     justify-content: center;
-    background-color: #ffcb45;
+    background-color: #336137;
     border-radius: 12px;
     padding: 10px 14px;
     font-weight: 600;
@@ -63,8 +66,9 @@ header{
     transition: background-color .3s ease;
 }
 
+
 .btn-default:hover{
-    background-color: #f8d477;
+    background-color: #75a97a;
     transition: all 0.3s ease-in-out;
 }
 
@@ -131,7 +135,7 @@ section{
 }
 
 #cta .title span{
-    color: #e9a209;
+    color: #336137;
 }
 
 #cta .description{
@@ -191,7 +195,7 @@ section{
     display: flex;
     align-items: start;
     justify-content: end;
-    width: 70%;
+    width: 90%;
     z-index: 2;
 }
 
@@ -241,7 +245,7 @@ section{
 }
 
 .section-title{
-    color: #e9a209;
+    color: #336137;
     font-size: 1.563rem;
 }
 
@@ -272,9 +276,18 @@ section{
     overflow: hidden;
 }
 
+.dish-image {
+  width: 150px; 
+  height: auto; 
+  display: block;
+  margin: 0 auto; 
+  border-radius: 10px; 
+}
+
+
 .dish-heart{
     position: absolute;
-    background-color: #e9a209;
+    background-color: #336137;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -358,6 +371,80 @@ section{
     padding: 12px;
     border-radius: 12px;
     box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0px;
 }
 
-/*MINUTO 1:05:30*/
+.feedback-avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.feedback-content p{
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback-content p span{
+    color:#e9a209;
+}
+
+@media screen and (max-width: 1170px){
+    #testimonials{
+        flex-direction: column;
+    }
+
+    #testimonials .section-subtitle{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    #testimonial_logo{
+        display: none;
+    }
+
+    #testimonials_content{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px){
+    #testimonials .section-subtitle{
+        font-size: 2rem;
+    }
+
+    #testimonials_content{
+        width: 100%;
+    }
+
+    .feedback{
+        flex-direction: column;
+    }
+}
+
+footer{
+    background-color: #ffe8b4;   
+}
+
+#footer_items{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 8% 24px 8%;
+    align-items: center;
+}
+
+#copyright{
+    color: #1d1d1d;
+    font-size: 500;
+}
+
+@media screen and (max-width: 600px){
+    #footer_items{
+        flex-direction: column;
+        font-weight: 500;
+    }
+}
